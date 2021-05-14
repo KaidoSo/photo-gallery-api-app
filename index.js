@@ -12,7 +12,15 @@ xhttp.onreadystatechange = function() {
         mainContainer.innerHTML = "";
         photos.forEach(function(photo){
             console.log(photo);
-        })
+            var photoContainer = document.createElement("div");
+            photoContainer.classList.add("photo-container");
+            photoContainer.innerHTML = `
+                <img src=${photo.src.large}>
+                <div id="author">Author: <a href="${photo.photographer_url}" target="_blank">${photo.photographer}</a></div>
+                <div id="photo-url"><a href="${photo.url}" target="_blank">Photo URL</a></div>
+            `;
+            mainContainer.appendChild(photoContainer);
+        });
     }
 };
 xhttp.open("GET", "https://api.pexels.com/v1/search?query=people", true);
