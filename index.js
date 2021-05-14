@@ -16,7 +16,7 @@ searchForm.addEventListener("submit", function(e){
                 var photoContainer = document.createElement("div");
                 photoContainer.classList.add("photo-container");
                 photoContainer.innerHTML = `
-                    <img src=${photo.src.large}>
+                    <div id="photo-img"><img src=${photo.src.medium}></div>
                     <div id="author">Author: <a href="${photo.photographer_url}" target="_blank">${photo.photographer}</a></div>
                     <div id="photo-url"><a href="${photo.url}" target="_blank">Photo URL</a></div>
                 `;
