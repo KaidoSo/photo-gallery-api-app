@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -15,9 +16,18 @@ body {
 #main-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .photo-container {
+    /* width: 100%; */
+}
+
+#photo-img {
+    width: 100%;
+}
+
+#photo-img img {
     width: 100%;
 }
 
