@@ -17,8 +17,11 @@ searchForm.addEventListener("submit", function(e){
                 photoContainer.classList.add("photo-container");
                 photoContainer.innerHTML = `
                     <div id="photo-img"><img src=${photo.src.medium}></div>
-                    <div id="author">Author: <a href="${photo.photographer_url}" target="_blank">${photo.photographer}</a></div>
-                    <div id="photo-url"><a href="${photo.url}" target="_blank">Photo URL</a></div>
+                    <div id="author">
+                        Author: <a href="${photo.photographer_url}" target="_blank">${photo.photographer}</a>
+                        || <a href="${photo.url}" target="_blank">Original</a>                    
+                    </div>
+                    <div id="photo-url"></div>
                 `;
                 mainContainer.appendChild(photoContainer);
             });
