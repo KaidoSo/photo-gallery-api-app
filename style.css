@@ -25,7 +25,7 @@ body {
 }
 
 header {
-    padding-top: 10px;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,31 +35,38 @@ header {
 .pexels-logo {
     padding-right: 5px;
     padding-top: 4px;
-
 }
 
 #search-form {
+    --size: 40px;
     display: flex;
-    --size: 40px;    
+    border: 1px solid var(--pexelGrey);
+    border-radius: 5px;
+    padding: 4px 3px 2px 3px;
 }
 
 #search-input {
+    padding-left: 10px;
     flex-grow: 1;
     height: var(--size);
     width: 60vw;    
-    border: none;
-    background-color: var(--searchBackground);
+    border: 0;
+    background-color: none;
     color: var(--pexelGrey);
     font-weight: 700;
+    outline: 0;
+    border-radius: 5px;
 }
 
 .search-button {
-    height: var(--size);
-    width: var(--size);
+    height: calc(var(--size) - 2px);
+    width: calc(var(--size) - 2px);
     font-size: 1.1rem;
     cursor: pointer;
     border: 0;
-    border-radius: 50%;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--pexelGreen);
 }
 
 #main-container {
