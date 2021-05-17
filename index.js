@@ -12,11 +12,10 @@ searchForm.addEventListener("submit", function(e){
             
             mainContainer.innerHTML = "";
             photos.forEach(function(photo){
-                console.log(photo);
                 var photoContainer = document.createElement("div");
                 photoContainer.classList.add("photo-container");
                 photoContainer.innerHTML = `
-                    <div id="photo-img"><img src=${photo.src.medium}></div>
+                    <div id="photo-img"><img src=${photo.src.large}></div>
                     <div id="author">
                         Author: <a href="${photo.photographer_url}" target="_blank">${photo.photographer}</a>
                         || <a href="${photo.url}" target="_blank">Original</a>                    
