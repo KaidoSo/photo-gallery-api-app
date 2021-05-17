@@ -24,7 +24,7 @@ searchForm.addEventListener("submit", function(e){
             });
         }
     };
-    var textValue = document.querySelector("#search-bar").value;
+    var textValue = document.querySelector("#search-input").value;
     xhttp.open("GET", `https://api.pexels.com/v1/search?query=${textValue}`, true);
     xhttp.setRequestHeader("Authorization", "563492ad6f91700001000001463302576bfb4b409abf6865fe9ad776");
     xhttp.send();
